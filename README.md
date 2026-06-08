@@ -1,228 +1,60 @@
-**Radio Link Degradation Prediction**
+# 📡 Signal Sentinel
 
+Signal Sentinel is an AI-powered telecom network monitoring system that predicts network health using machine learning.
 
+The project analyzes signal strength, throughput, latency, network type, and radio measurements to generate a network health score, identify potential issues, and provide recommendations for improving network performance.
 
-**About the Project**
+## Features
 
+* Network Health Prediction
+* Risk Score Calculation
+* Root Cause Analysis
+* AI Recommendations
+* Network Stability Index
+* Link Quality Score
+* Failure Probability Estimation
+* Radio Link Forecast
+* Prediction History
+* PDF Report Generation
+* Interactive Visualizations
 
+## Technologies Used
 
-This project is about detecting radio link degradation in cellular networks using machine learning.
+* Python
+* Streamlit
+* XGBoost
+* Pandas
+* NumPy
+* Plotly
+* Scikit-Learn
 
-The model checks network parameters and predicts whether the network condition is Normal or Degraded.
+## Project Structure
 
+* `app.py` – Main Streamlit application
+* `model.pkl` – Trained machine learning model
+* `network_encoder.pkl` – Network type encoder
+* `feature_columns.pkl` – Feature list used during prediction
+* `cleaned_network_data.csv` – Dataset
+* `feature_importance.csv` – Model feature importance values
 
+## How to Run
 
-The idea is to detect problems early instead of waiting for complete network failure.
+Install dependencies:
 
+```bash
+pip install -r requirements.txt
+```
 
+Run the application:
 
-**Problem Statement**
+```bash
+streamlit run app.py
+```
 
+## Purpose
 
+This project was developed to explore the use of machine learning for telecom network monitoring and radio link degradation analysis. It provides an interactive dashboard for analyzing network conditions and generating actionable insights.
 
-In mobile networks, poor signal conditions can cause delays, packet loss, and bad user experience.
+## Author
 
-If network degradation is detected early, corrective actions can be taken.
-
-
-
-This project helps to:
-
-
-
-Analyze network signal data
-
-
-
-Identify whether the network is normal or degraded
-
-
-
-Provide quick predictions through a simple web app
-
-
-
-**Dataset**
-
-
-
-The dataset contains simulated network data such as:
-
-
-
-Signal Strength (dBm)
-
-
-
-Signal Quality (%)
-
-
-
-Latency (ms)
-
-
-
-Network Type (3G, 4G, LTE, 5G)
-
-
-
-Since extreme failure cases are very rare, the project is treated as a binary classification problem.
-
-
-
-**Features Used**
-
-
-
-Signal Strength
-
-
-
-Signal Quality
-
-
-
-Latency
-
-
-
-Network Type
-
-
-
-**Model Used**
-
-
-
-Random Forest Classifier
-
-
-
-This model was chosen because:
-
-
-
-It works well with tabular data
-
-
-
-It gives good accuracy
-
-
-
-It is simple and reliable
-
-
-
-**Project Flow**
-
-
-
-Load the dataset
-
-
-
-Preprocess and prepare features
-
-
-
-Split data into training and testing sets
-
-
-
-Train the machine learning model
-
-
-
-Evaluate the model
-
-
-
-Predict network condition
-
-
-
-Deploy using Streamlit
-
-
-
-**Web Application**
-
-
-
-A Streamlit web app is used to:
-
-
-
-Enter network values
-
-
-
-Check the network condition
-
-
-
-See results instantly
-
-
-
-Output:
-
-
-
-🟢 Normal
-
-
-
-🟡 Degraded
-
-
-
-**Evaluation**
-
-
-
-The model performance is checked using:
-
-
-
-Accuracy
-
-
-
-Precision
-
-
-
-Recall
-
-
-
-Confusion Matrix
-
-
-
-The model gives stable results for new input values.
-
-
-
-**How to Run the Project**
-
-1️⃣ Create Virtual Environment
-
-conda create -n rlf\_ui python=3.10
-
-conda activate rlf\_ui
-
-
-
-**Conclusion**
-
-
-
-This project shows how machine learning can be used to monitor network quality and detect degradation early in a simple and effective way.
-
-
-
-
-
+Srujan
